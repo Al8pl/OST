@@ -1,0 +1,46 @@
+<html>
+<head>
+	<center> Palindrome using String Functions
+</center>
+</head>
+<body bgcolor="green">
+<center>
+<pre>
+<form action="Ex2.php" method="post">
+Enter The String to Check for Palindorme: 
+<input type="text" name="pal" size="25"><br>
+<br>
+<input type="submit">
+</form>
+</center>
+</pre>
+</body>
+</html>
+
+
+
+<?php
+// PHP code to check for Palindrome string in PHP Using strrev()
+$pst = $_POST['pal'];
+function Palindrome($string)
+{  
+	if (strrev($string) == $string)
+	{  
+	return 1;  
+	}
+	else
+	{
+	return 0;
+	}
+}  
+	// Driver Code
+//$original = "DAD"; 
+if(Palindrome($pst))
+{  
+	echo "<center><b>Palindrome </b></center>";  
+} 
+else
+{  
+echo "<center><b>Not a Palindrome </b></center>";  
+}
+?>

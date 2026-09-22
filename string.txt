@@ -1,0 +1,17 @@
+print "String manipulation:\n";
+my $s = "SRM Institute Of Science And Humanities";
+print "The Given String is :\n";
+print "---------------------\n";
+print $s;
+print("\nTo upper case:\n");
+print(uc($s),"\n");
+
+print("To lower case:\n");
+print(lc($s),"\n");
+
+print("\n\nLength of The String :",length($s),"\n");
+print("\n");
+
+print "String Replacement:\n";
+substr($s, 4, length($s), "is My Favorite University");
+print($s,"\n");
