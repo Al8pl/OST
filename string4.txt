@@ -1,0 +1,24 @@
+
+<html>
+<body>
+<h3>String Operations</h3>
+
+<form method="post">
+    Enter a string:
+    <input type="text" name="s" required>
+    <input type="submit" name="btn" value="Submit">
+</form>
+
+<?php
+if (isset($_POST['btn'])) {
+    $s = $_POST['s'];
+
+    echo "Original: $s<br>";
+    echo "Length: " . strlen($s) . "<br>";
+    echo "Uppercase: " . strtoupper($s) . "<br>";
+    echo "Lowercase: " . strtolower($s) . "<br>";
+    echo "Reverse: " . strrev($s);
+}
+?>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+<html>
+<body>
+<h3>Palindrome Checker</h3>
+
+<form method="post">
+    Enter a word:
+    <input type="text" name="word" required>
+    <input type="submit" name="btn" value="Check">
+</form>
+
+<?php
+function palindrome($s) {
+    if ($s == strrev($s))
+        return "Palindrome";
+    else
+        return "Not Palindrome";
+}
+
+if (isset($_POST['btn'])) {
+    echo palindrome($_POST['word']);
+}
+?>
+</body>
+</html>

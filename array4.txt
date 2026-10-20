@@ -1,0 +1,36 @@
+
+<html>
+<body>
+<h3>Array Implementation</h3>
+
+<?php
+$name = array("Ravi", "Arun", "Kumar");
+$age = array(20, 21, 22);
+
+for ($i = 0; $i < 3; $i++) {
+    echo "Name: " . $name[$i] . "<br>";
+    echo "Age: " . $age[$i] . "<br><br>";
+}
+
+
+
+$name[] = "Raj";
+$age[] = 23;
+
+// Modifying an element
+$name[1] = "Ajay";
+
+// Display modified array
+echo "<h3>After Manipulation</h3>";
+
+for ($i = 0; $i < count($name); $i++) {
+    echo "Name: " . $name[$i] . "<br>";
+    echo "Age: " . $age[$i] . "<br><br>";
+}
+
+
+
+?>
+
+</body>
+</html>

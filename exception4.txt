@@ -1,0 +1,35 @@
+
+
+<html>
+<body>
+<h3>Exception Handling</h3>
+
+<form method="post">
+    Enter first number:
+    <input type="number" name="a" required><br><br>
+
+    Enter second number:
+    <input type="number" name="b" required><br><br>
+
+    <input type="submit" name="btn" value="Divide">
+</form>
+
+<?php
+if (isset($_POST['btn'])) {
+    try {
+        $a = $_POST['a'];
+        $b = $_POST['b'];
+
+        if ($b == 0)
+            throw new Exception("Cannot divide by zero");
+
+        echo "Result = " . ($a / $b);
+    }
+    catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
+?>
+
+</body>
+</html>
